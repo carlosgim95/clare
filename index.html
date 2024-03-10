@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Incluye la descripción del artículo en la etiqueta meta -->
+    <meta name="description" content="Descripción del lugar importante para SEO">
+    <!-- El título del artículo será el nombre del lugar importante -->
+    <title>Nombre del lugar importante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ 
+     <!-- Estilos para Swiper.js -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <style>
+        /* Estilos CSS para la página */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        
+    .container {
+        position: relative;
+        width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
+        overflow: hidden; /* Para asegurarse de que la imagen no se desborde */
+    }
+
+    
+
+    .container img {
+        width: 100%; /* Para que la imagen ocupe todo el ancho del contenedor */
+        display: block; /* Para asegurarse de que la imagen se muestre como un bloque */
+        border: 1px solid #ccc; /* Añade un borde de 1px sólido gris */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+        margin-top: 20px; /* Añade un margen superior de 20px */
+    }
+
+    .container h1 {
+    position: absolute;
+    top: 20%; /* Ajusta la posición vertical del título */
+    left: 10%; /* Ajusta la posición horizontal del título */
+    color: white; /* Cambia el color del título para que sea visible en la imagen */
+    width: auto; /* El ancho se ajustará automáticamente al contenido */
+    max-width: 60%; /* Limita el ancho del título */
+    margin-bottom: 40px; /* Agrega un espacio entre el título y el párrafo */
+    font-size: 44px; /* Cambia el tamaño de la fuente del párrafo */
+}
+
+.container p {
+    position: absolute;
+    top: calc(20% + 120px); /* Coloca el párrafo debajo del título */
+    left: 10%; /* Ajusta la posición horizontal del párrafo */
+    color: white; /* Cambia el color del párrafo para que sea visible en la imagen */
+    max-width: 80%; /* Establece el ancho máximo del párrafo según el ancho del título */
+    margin: 0; /* Elimina el margen predeterminado del párrafo */ 
+    font-size: 24px; /* Cambia el tamaño de la fuente del párrafo */
+    width: calc(40% + 90px);
+
+}
+
+.icon-description {
+    position: absolute;
+    bottom: 40px; /* Ajusta la posición vertical */
+    right: 5%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    size:bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#fff;
+}
+
+    .icon {
+    margin-right: 10px;
+    vertical-align: middle; /* Alinea verticalmente el icono */
+    margin-top: -15px; /* Ajusta el margen superior para alinear verticalmente con el texto */
+    border:none;
+}
+
+    .icon img {
+    width: 25px; /* Ajusta el tamaño del icono según sea necesario */
+    height: auto;
+    border:none;
+}
+
+    .description {
+    color: white; /* Asegura que el color del texto sea blanco */
+}
+
+
+
+/* Estilos para el segundo contenedor de texto */
+.container-2 {
+
+    position: relative; /* Asegura que el contenedor tenga una posición relativa */
+    width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Añade un relleno interior al contenedor */
+    background-color: #ffffff; /* Cambia el color de fondo del contenedor si es necesario */
+    text-align: center; /* Centra el contenido del contenedor horizontalmente */
+     font-size: 30px;
+     margin-top: 60px;
+}
+
+/* Estilos para el tercer contenedor */
+#container-3 {
+    position: relative;
+    width: 80%; /* Ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    margin-top: 80px; /* Margen superior para una experiencia visual agradable */
+    max-width: 3000px; /* Establece el ancho máximo del contenedor */
+    padding: 20px; /* Añade un relleno interior al contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    left:10%;
+}
+
+#container-3 img {
+    width: 80%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    clip-path: polygon(
+    100% 0%,
+    100% 10%,
+    90% 20%,
+    100% 30%,
+    100% 40%,
+    90% 50%,
+    100% 60%,
+    100% 70%,
+    90% 80%,
+    100% 90%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+);
+
+
+
+}
+
+#container-3 .card {
+    position: absolute; /* Establece el posicionamiento absoluto para la tarjeta */
+    top: 45%; /* Coloca la tarjeta en la mitad superior del contenedor */
+    left: 10%; /* Coloca la tarjeta en la mitad izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra la tarjeta horizontal y verticalmente */
+    width: 90%; /* Anchura de la tarjeta */
+    max-width: 300px; /* Anchura máxima de la tarjeta */
+    height: auto; /* Altura automática */
+     background-color: #f0f0f0; /* Color de fondo de la tarjeta */
+    padding: 20px; /* Añade espacio interior a la tarjeta */
+    border-radius: 10px; /* Añade bordes redondeados a la tarjeta */
+    margin-top: 20px; /* Margen superior */
+    margin-left: 40px; /* Margen izquierdo */
+    height: 50%;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    min-height: 340px; /* Altura mínima de la tarjeta */
+    max-height: 200px; /* Altura máxima de la tarjeta */
+}
+
+#container-3 .card h3 {
+    margin-top: 0; /* Elimina el margen superior del título */
+    font-size: 38px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container-3 .card h4 {
+    margin-bottom: 10px; /* Añade un pequeño margen inferior al subtítulo */
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+#container-3 button {
+    display: block; /* Hace que el botón ocupe todo el ancho de la tarjeta */
+    width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+    padding: 10px; /* Añade espacio interior al botón */
+    background-color: #0bf050; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Estilos para el cuarto contenedor de texto */
+.container-4 {
+position: relative; /* Asegura que el contenedor tenga una posición relativa */
+width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
+margin: 0 auto; /* Centra el contenedor horizontalmente */
+padding: 20px; /* Añade un relleno interior al contenedor */
+background-color: #ffffff; /* Cambia el color de fondo del contenedor si es necesario */
+text-align: center; /* Centra el contenido del contenedor horizontalmente */
+ font-size: 30px;
+ margin-top: 60px;
+}
+
+/* Estilos para el quinto contenedor */
+#container-5 {
+    position: relative;
+    width: 80%; /* Ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    margin-top: 80px; /* Margen superior para una experiencia visual agradable */
+    max-width: 3000px; /* Establece el ancho máximo del contenedor */
+    padding: 20px; /* Añade un relleno interior al contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    right: 10%;
+}
+
+#container-5 img {
+    width: 80%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    clip-path: polygon(
+    0% 0%,
+    0% 10%,
+    10% 20%,
+    0% 30%,
+    0% 40%,
+    10% 50%,
+    0% 60%,
+    0% 70%,
+    10% 80%,
+    0% 90%,
+    0% 100%,
+    100% 100%,
+    100% 0%
+);
+
+
+
+}
+
+#container-5 .card {
+    position: absolute; /* Establece el posicionamiento absoluto para la tarjeta */
+    top: 45%; /* Coloca la tarjeta en la mitad superior del contenedor */
+    right: -10%; /* Coloca la tarjeta en la mitad izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra la tarjeta horizontal y verticalmente */
+    width: 90%; /* Anchura de la tarjeta */
+    max-width: 300px; /* Anchura máxima de la tarjeta */
+    height: auto; /* Altura automática */
+     background-color: #f0f0f0; /* Color de fondo de la tarjeta */
+    padding: 20px; /* Añade espacio interior a la tarjeta */
+    border-radius: 10px; /* Añade bordes redondeados a la tarjeta */
+    margin-top: 20px; /* Margen superior */
+    margin-right: 40px; /* Margen izquierdo */
+    height: 50%;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    min-height: 370px; /* Altura mínima de la tarjeta */
+    max-height: 200px; /* Altura máxima de la tarjeta */
+}
+
+#container-5 .card h3 {
+    margin-top: 0; /* Elimina el margen superior del título */
+    font-size: 38px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container-5 .card h4 {
+    margin-bottom: 10px; /* Añade un pequeño margen inferior al subtítulo */
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+#container-5 button {
+    display: block; /* Hace que el botón ocupe todo el ancho de la tarjeta */
+    width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+    padding: 10px; /* Añade espacio interior al botón */
+    background-color: #0bf050; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilos para el sexto contenedor de texto */
+.container-6 {
+position: relative; /* Asegura que el contenedor tenga una posición relativa */
+width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
+margin: 0 auto; /* Centra el contenedor horizontalmente */
+padding: 20px; /* Añade un relleno interior al contenedor */
+background-color: #ffffff; /* Cambia el color de fondo del contenedor si es necesario */
+text-align: center; /* Centra el contenido del contenedor horizontalmente */
+ font-size: 30px;
+ margin-top: 60px;
+}
+
+
+/* Estilos para el septimo contenedor */
+#container-7 {
+    position: relative;
+    width: 80%; /* Ancho del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    margin-top: 80px; /* Margen superior para una experiencia visual agradable */
+    max-width: 3000px; /* Establece el ancho máximo del contenedor */
+    padding: 20px; /* Añade un relleno interior al contenedor */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    left:10%;
+}
+
+#container-7 img {
+    width: 80%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    clip-path: polygon(
+    100% 0%,
+    100% 10%,
+    90% 20%,
+    100% 30%,
+    100% 40%,
+    90% 50%,
+    100% 60%,
+    100% 70%,
+    90% 80%,
+    100% 90%,
+    100% 100%,
+    0% 100%,
+    0% 0%
+);
+
+
+
+}
+
+#container-7 .card {
+    position: absolute; /* Establece el posicionamiento absoluto para la tarjeta */
+    top: 45%; /* Coloca la tarjeta en la mitad superior del contenedor */
+    left: 10%; /* Coloca la tarjeta en la mitad izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra la tarjeta horizontal y verticalmente */
+    width: 90%; /* Anchura de la tarjeta */
+    max-width: 300px; /* Anchura máxima de la tarjeta */
+    height: auto; /* Altura automática */
+     background-color: #f0f0f0; /* Color de fondo de la tarjeta */
+    padding: 20px; /* Añade espacio interior a la tarjeta */
+    border-radius: 10px; /* Añade bordes redondeados a la tarjeta */
+    margin-top: 20px; /* Margen superior */
+    margin-left: 40px; /* Margen izquierdo */
+    height: 50%;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    min-height: 370px; /* Altura mínima de la tarjeta */
+    max-height: 200px; /* Altura máxima de la tarjeta */
+}
+
+#container-7 .card h3 {
+    margin-top: 0; /* Elimina el margen superior del título */
+    font-size: 38px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container-7 .card h4 {
+    margin-bottom: 10px; /* Añade un pequeño margen inferior al subtítulo */
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+#container-7 .button {
+    display: block; /* Hace que el botón ocupe todo el ancho de la tarjeta */
+    width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+    padding: 10px; /* Añade espacio interior al botón */
+    background-color: #0bf050; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+   /* Estilos para el contenedor del slider */
+#container-8 {
+    margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 100px;
+    padding-top: -20px; /* Reducir el espacio en la parte superior */
+    padding-bottom: 10px; /* Reducir el espacio en la parte inferior */
+    background-color: #80ACEF; /* Cambiar color de fondo a verde */
+    margin: 0 auto;
+    position: relative; /* Establecer posición relativa */
+    clip-path: polygon(
+        0% 5%, /* Primer punto en la parte superior izquierda */
+        2.7778% 10%, /* Segundo punto en la parte superior izquierda */
+        5.5556% 5%, /* Tercer punto en la parte superior izquierda */
+        8.3333% 10%, /* Cuarto punto en la parte superior izquierda */
+        11.1111% 5%, /* Quinto punto en la parte superior izquierda */
+        13.8889% 10%, /* Sexto punto en la parte superior izquierda */
+        16.6667% 5%, /* Séptimo punto en la parte superior izquierda */
+        19.4444% 10%, /* Octavo punto en la parte superior izquierda */
+        22.2222% 5%, /* Noveno punto en la parte superior izquierda */
+        25% 10%, /* Décimo punto en la parte superior izquierda */
+        27.7778% 5%, /* Undécimo punto en la parte superior izquierda */
+        30.5556% 10%, /* Duodécimo punto en la parte superior izquierda */
+        33.3333% 5%, /* Decimotercer punto en la parte superior izquierda */
+        36.1111% 10%, /* Decimocuarto punto en la parte superior izquierda */
+        38.8889% 5%, /* Decimoquinto punto en la parte superior izquierda */
+        41.6667% 10%, /* Decimosexto punto en la parte superior izquierda */
+        44.4444% 5%, /* Decimoséptimo punto en la parte superior izquierda */
+        47.2222% 10%, /* Decimoctavo punto en la parte superior izquierda */
+        50% 5%, /* Decimonoveno punto en la parte superior izquierda */
+        52.7778% 10%, /* Vigésimo punto en la parte superior izquierda */
+        55.5556% 5%, /* Vigésimo primero punto en la parte superior izquierda */
+        58.3333% 10%, /* Vigésimo segundo punto en la parte superior izquierda */
+        61.1111% 5%, /* Vigésimo tercero punto en la parte superior izquierda */
+        63.8889% 10%, /* Vigésimo cuarto punto en la parte superior izquierda */
+        66.6667% 5%, /* Vigésimo quinto punto en la parte superior izquierda */
+        69.4444% 10%, /* Vigésimo sexto punto en la parte superior izquierda */
+        72.2222% 5%, /* Vigésimo séptimo punto en la parte superior izquierda */
+        75% 10%, /* Vigésimo octavo punto en la parte superior izquierda */
+        77.7778% 5%, /* Vigésimo noveno punto en la parte superior izquierda */
+        80.5556% 10%, /* Trigésimo punto en la parte superior izquierda */
+        83.3333% 5%, /* Trigésimo primero punto en la parte superior izquierda */
+        86.1111% 10%, /* Trigésimo segundo punto en la parte superior izquierda */
+        88.8889% 5%, /* Trigésimo tercero punto en la parte superior izquierda */
+        91.6667% 10%, /* Trigésimo cuarto punto en la parte superior izquierda */
+        94.4444% 5%, /* Trigésimo quinto punto en la parte superior izquierda */
+        97.2222% 10%, /* Trigésimo sexto punto en la parte superior izquierda */
+        100% 5%, /* Punto final en la parte superior derecha */
+        100% 95%, /* Primer punto en la parte inferior derecha */
+        97.2222% 90%, /* Segundo punto en la parte inferior derecha */
+        94.4444% 95%, /* Tercer punto en la parte inferior derecha */
+        91.6667% 90%, /* Cuarto punto en la parte inferior derecha */
+        88.8889% 95%, /* Quinto punto en la parte inferior derecha */
+        86.1111% 90%, /* Sexto punto en la parte inferior derecha */
+        83.3333% 95%, /* Séptimo punto en la parte inferior derecha */
+        80.5556% 90%, /* Octavo punto en la parte inferior derecha */
+        77.7778% 95%, /* Noveno punto en la parte inferior derecha */
+        75% 90%, /* Décimo punto en la parte inferior derecha */
+        72.2222% 95%, /* Undécimo punto en la parte inferior derecha */
+        69.4444% 90%, /* Duodécimo punto en la parte inferior derecha */
+        66.6667% 95%, /* Decimotercer punto en la parte inferior derecha */
+        63.8889% 90%, /* Decimocuarto punto en la parte inferior derecha */
+        61.1111% 95%, /* Decimoquinto punto en la parte inferior derecha */
+        58.3333% 90%, /* Decimosexto punto en la parte inferior derecha */
+        55.5556% 95%, /* Decimoséptimo punto en la parte inferior derecha */
+        52.7778% 90%, /* Decimoctavo punto en la parte inferior derecha */
+        50% 95%, /* Decimonoveno punto en la parte inferior derecha */
+        47.2222% 90%, /* Vigésimo punto en la parte inferior derecha */
+        44.4444% 95%, /* Vigésimo primero punto en la parte inferior derecha */
+        41.6667% 90%, /* Vigésimo segundo punto en la parte inferior derecha */
+        38.8889% 95%, /* Vigésimo tercero punto en la parte inferior derecha */
+        36.1111% 90%, /* Vigésimo cuarto punto en la parte inferior derecha */
+        33.3333% 95%, /* Vigésimo quinto punto en la parte inferior derecha */
+        30.5556% 90%, /* Vigésimo sexto punto en la parte inferior derecha */
+        27.7778% 95%, /* Vigésimo séptimo punto en la parte inferior derecha */
+        25% 90%, /* Vigésimo octavo punto en la parte inferior derecha */
+        22.2222% 95%, /* Vigésimo noveno punto en la parte inferior derecha */
+        19.4444% 90%, /* Trigésimo punto en la parte inferior derecha */
+        16.6667% 95%, /* Trigésimo primero punto en la parte inferior derecha */
+        13.8889% 90%, /* Trigésimo segundo punto en la parte inferior derecha */
+        11.1111% 95%, /* Trigésimo tercero punto en la parte inferior derecha */
+        8.3333% 90%, /* Trigésimo cuarto punto en la parte inferior derecha */
+        5.5556% 95%, /* Trigésimo quinto punto en la parte inferior derecha */
+        2.7778% 90%, /* Trigésimo sexto punto en la parte inferior derecha */
+        0% 95% /* Punto final en la parte inferior izquierda */
+    );
+}
+
+/* Estilos para la cabecera del slider (título y subtítulo) */
+.slider-header {
+    text-align: center;
+    margin-bottom: 100px;
+    left: 40px;
+    position: absolute;
+    top: 150px;
+}
+
+/* Estilos para el título */
+.slider-header h2 {
+    margin: 0; /* Eliminar margen */
+    margin-right: 60px;
+    
+}
+
+/* Estilos para el subtítulo */
+.slider-header h3 {
+    margin: -10; /* Eliminar margen */
+    margin-left: 125px;
+
+}
+
+/* Estilos para los slides */
+.swiper-slide {
+    width: 263%; /* Utiliza un ancho relativo para que los slides sean más flexibles */
+    max-width: 853px; /* Establece un ancho máximo para evitar que los slides sean demasiado anchos en pantallas grandes */
+    height: 512px; /* Permite que la altura se ajuste automáticamente al contenido */
+    max-height: 1000px;
+    text-align: center;
+    font-size: 18px;
+    background: none;
+    border: none;
+    border-radius: none;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 0px; /* Ajusta los márgenes para dar espacio entre los slides */
+    margin-left: 160px;
+    margin-top: 350px;
+    margin-bottom: 60px;
+    bottom: 80px;
+}
+/* Estilos para la imagen dentro del slide */
+.swiper-slide img {
+    width: 100%; /* La imagen ocupa todo el ancho del slide */
+    height: 100%; /* Altura automática */
+    object-fit: cover; /* Hace que la imagen mantenga su relación de aspecto y cubra completamente el contenedor */
+    border-bottom-left-radius: 10px; /* Bordes redondeados en la esquina inferior izquierda */
+    border-bottom-right-radius: 10px; /* Bordes redondeados en la esquina inferior derecha */
+    display: block;
+}
+
+/* Estilos para el título dentro del slide */
+.swiper-slide h4 {
+    margin: 0px; /* Eliminar margen */
+    padding: 10px; /* Añadir relleno */
+    background-color: transparent; /* Fondo semi-transparente para el título */
+    color: white; /* Color del texto del título */
+    size: bold;;
+    font-size: 24px; /* Tamaño de fuente del título */
+    position: absolute; /* Posición absoluta para colocar el título en la parte inferior */
+    bottom: 0; /* Alinear el título en la parte inferior */
+    left: 0px; /* Alinear el título a la izquierda */
+    width: 100%; /* Ancho completo */
+    border-bottom-left-radius: 10px; /* Bordes redondeados en la esquina inferior izquierda */
+    border-bottom-right-radius: 10px; /* Bordes redondeados en la esquina inferior derecha */
+    
+
+}
+
+
+/* Estilos para el contenedor del slider */
+.swiper-container {
+    white-space: nowrap; /* Evitar que los slides se desplacen a una nueva línea */
+    width: 100%;
+    height: 300%;
+    overflow: hidden;
+    position: relative;
+   }
+
+   /* Estilos para la barra de progreso */
+.slider-progress {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    left: 160px;
+    height: 5px;
+    background-color: transparent;
+    width: 75%; 
+    
+}
+
+
+/* Estilos para el contenedor de los botones de navegación */
+.container-9 {
+    display: flex; /* Usar flexbox para alinear los elementos en una fila */
+    justify-content: flex-end; /* Alinear los elementos al final del contenedor */
+    position: absolute; /* Posición absoluta */
+    top: 180px; /* Ajusta la posición superior */
+    cursor: none; /* Cambia el cursor a pointer */
+    z-index: 500; /* Asegura que estén por encima de los slides */
+    background-color: transparent;
+    border: none; /* Elimina el borde */
+    max-width: 60px;
+    max-height: 60px;
+    right: 220px;
+    
+}
+
+.swiper-button-next, .swiper-button-prev {
+            color: black; /* Cambia el color de los iconos */
+            font-size: 24px; /* Cambia el tamaño de los iconos */
+            background-color: transparent; /* Cambia el color de fondo de los botones */
+            border: none; /* Elimina el borde de los botones */
+ }
+
+ /* Eliminar los estilos predeterminados del botón */
+.swiper-button-next, .swiper-button-prev {
+    all: unset;
+    -webkit-tap-highlight-color: transparent; /* Evitar el resaltado al hacer clic */
+    cursor: pointer; /* Cambiar el cursor a pointer */
+}
+
+/* Estilo para la flecha del botón de navegación hacia la derecha */
+.swiper-button-next::after {
+    content: ''; /* Contenido generado */
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Alinear en el centro vertical */
+    left: 50%; /* Alinear en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centrar */
+    border: solid black; /* Flecha sólida */
+    border-width: 2px 2px 0 0; /* Tamaño de la flecha */
+    display: inline-block; /* Mostrar como bloque */
+    width: 20px; /* Ancho de la flecha */
+    height: 20px; /* Altura de la flecha */
+    transform: rotate(45deg); /* Rotar la flecha */
+    left: calc(50% + 10px);
+   
+}
+
+
+/* Estilo para la flecha del botón de navegación hacia la izquierda */
+.swiper-button-prev::after {
+    content: ''; /* Contenido generado */
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Alinear en el centro vertical */
+    left: 50%; /* Alinear en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centrar */
+    border: solid black; /* Flecha sólida */
+    border-width: 2px 2px 0 0; /* Tamaño de la flecha */
+    display: inline-block; /* Mostrar como bloque */
+    width: 20px; /* Ancho de la flecha */
+    height: 20px; /* Altura de la flecha */
+    transform: rotate(-135deg); /* Rotar la flecha */
+    right: calc(50% + 10px);
+}
+
+
+/* Estilos para el Décimo contenedor */
+#container-10 {
+    width: 100%; /* Ajustar el ancho según tus necesidades */
+    height: calc(100% - 50px); /* Ajustar la altura según tus necesidades */
+    margin-top: 50px; /* Ajustar el margen superior según tus necesidades */
+    padding-bottom: 50px;
+    padding-top: 100px;
+    border: none; /* Si no quieres mostrar el borde del contenedor */
+    position: relative;
+    background-color: beige; /* Color de fondo beige para todo el contenedor */
+    margin-left: 0px; /* Margen a la izquierda de al menos 100px */
+    margin-right: 0px; /* Margen a la derecha de al menos 100px */
+    right: -20px;
+}
+
+/* Estilos adicionales para el iframe (opcional) */
+#container-10 iframe {
+    width: 80%;
+    height: 630px; /* Ajustar la altura del iframe según tus necesidades */
+    border: none; /* Si no quieres mostrar el borde del iframe */
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+
+
+
+       /* Estilos para tabletas (por ejemplo, iPads) */
+       @media (max-width: 768px) {
+    .container {
+        height: 400px; /* Ajusta la altura para tabletas */
+    }
+
+    .container h1 {
+        font-size: 20px; /* Ajusta el tamaño del texto del título para tabletas */
+    }
+
+    .container p  {
+        font-size: 16px; /* Ajusta el tamaño del texto del subtítulo para tabletas */
+    }
+
+    .icon-description {
+        bottom: 10px; /* Ajusta la posición vertical para tabletas */
+    }
+
+    .icon {
+    margin-right: 10px;
+    vertical-align: middle; /* Alinea verticalmente el icono */
+    margin-top: -15px; /* Ajusta el margen superior para alinear verticalmente con el texto */
+    border:none;
+}
+
+    .icon img {
+        width: 20px; /* Ajusta el tamaño del icono para tabletas */
+    }
+
+    .description {
+    color: white; /* Asegura que el color del texto sea blanco */
+
+}
+
+.container-2 {
+        width: 90%; /* Reduce el ancho del contenedor para adaptarse a tablets */
+        font-size: 24px; /* Reduce el tamaño de la fuente para adaptarse a tablets */
+    }
+
+  #container-3 {
+        width: 90%;
+    }
+
+ #container-3 .card {
+        left: 5%;
+        margin-left: 0;
+    }
+
+    .container-4 {
+        font-size: 24px; /* Ajusta el tamaño de la fuente para tabletas */
+        margin-top: 40px; /* Ajusta el margen superior para tabletas */
+    }
+
+    #container-5 {
+        width: 90%; /* Ancho del contenedor ajustado para tabletas */
+        margin-top: 60px; /* Margen superior ajustado */
+        padding: 10px; /* Relleno interior reducido */
+    }
+
+    #container-5 img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        clip-path: none; /* Se elimina el recorte de la imagen */
+    }
+
+    #container-5 .card {
+        top: 50%; /* Coloca la tarjeta en la mitad vertical del contenedor */
+        right: 0; /* Alinea la tarjeta a la derecha del contenedor */
+        transform: translate(0, -50%); /* Centra verticalmente la tarjeta */
+        width: 80%; /* Anchura de la tarjeta ajustada */
+        max-width: none; /* Se elimina la anchura máxima */
+        margin: 0 auto; /* Centra horizontalmente la tarjeta */
+    }
+
+    #container-5 .card h3 {
+        font-size: 32px; /* Tamaño de fuente del título ajustado */
+    }
+
+    #container-5 .card h4 {
+        font-size: 18px; /* Tamaño de fuente del subtítulo ajustado */
+    }
+
+    .container-6 {
+        width: 80%; /* Ancho del contenedor ajustado para tabletas */
+        font-size: 26px; /* Tamaño de fuente ajustado */
+        margin-top: 50px; /* Margen superior ajustado */
+    }
+
+    #container-7 {
+        width: 90%; /* Ancho del contenedor ajustado para tabletas */
+        margin-top: 60px; /* Margen superior ajustado */
+        padding: 15px; /* Relleno interior reducido */
+        left: 5%; /* Ajuste de posición */
+    }
+
+    #container-7 img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        clip-path: none; /* Se elimina el recorte de la imagen */
+    }
+
+    #container-7 .card {
+        top: 50%; /* Coloca la tarjeta en la mitad vertical del contenedor */
+        left: 0; /* Alinea la tarjeta a la izquierda del contenedor */
+        transform: translate(0, -50%); /* Centra verticalmente la tarjeta */
+        width: 80%; /* Anchura de la tarjeta ajustada */
+        margin: 0 auto; /* Centra horizontalmente la tarjeta */
+    }
+
+    #container-7 .card h3 {
+        font-size: 32px; /* Tamaño de fuente del título ajustado */
+    }
+
+    #container-7 .card h4 {
+        font-size: 18px; /* Tamaño de fuente del subtítulo ajustado */
+    }
+
+    #container-7 .button {
+        font-size: 18px; /* Tamaño de fuente del botón ajustado */
+        margin-top: 30px; /* Margen superior ajustado */
+    }
+
+
+}
+           
+       
+        /* Estilos para dispositivos móviles (por ejemplo, teléfonos) */
+@media (max-width: 480px) {
+    .container {
+        height: 300px; /* Ajusta la altura para dispositivos móviles */
+    }
+
+    .container h1{
+        font-size: 20px; /* Ajusta el tamaño del texto del título para dispositivos móviles */
+    }
+
+    .container p {
+        font-size: 16px; /* Ajusta el tamaño del texto del subtítulo para dispositivos móviles */
+    }
+
+    .icon-description {
+        bottom: 10px; /* Ajusta la posición vertical para dispositivos móviles */
+    }
+
+    .icon {
+    margin-right: 10px;
+    vertical-align: middle; /* Alinea verticalmente el icono */
+    margin-top: -15px; /* Ajusta el margen superior para alinear verticalmente con el texto */
+    border:none;
+}
+
+    .icon img {
+        width: 20px; /* Ajusta el tamaño del icono para dispositivos móviles */
+    }
+
+    .description {
+    color: white; /* Asegura que el color del texto sea blanco */
+
+}
+
+.container-2 {
+        width: 100%; /* Ajusta el ancho del contenedor para adaptarse a dispositivos móviles */
+        font-size: 20px; /* Reduce aún más el tamaño de la fuente para adaptarse a dispositivos móviles */
+    }
+
+    #container-3 .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    #container-3 .card h3 {
+        font-size: 24px;
+    }
+
+    #container-3 .card h4 {
+        font-size: 18px;
+    }
+
+    #container-3 button {
+        font-size: 16px;
+    }
+
+    .container-4 {
+        font-size: 20px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+        margin-top: 20px; /* Ajusta el margen superior para dispositivos móviles */
+    }
+
+    #container-5 {
+        width: 100%; /* Ancho del contenedor ajustado para dispositivos móviles */
+        margin-top: 40px; /* Margen superior ajustado */
+        padding: 5px; /* Relleno interior reducido */
+    }
+
+    #container-5 .card {
+        width: 90%; /* Anchura de la tarjeta ajustada */
+        margin: 0 auto; /* Centra horizontalmente la tarjeta */
+    }
+
+    #container-5 .card h3 {
+        font-size: 28px; /* Tamaño de fuente del título ajustado */
+    }
+
+    #container-5 .card h4 {
+        font-size: 16px; /* Tamaño de fuente del subtítulo ajustado */
+    }
+
+    #container-5 button {
+        font-size: 18px; /* Tamaño de fuente del botón ajustado */
+        margin-top: 30px; /* Margen superior ajustado */
+    }
+
+    .container-6 {
+        width: 100%; /* Ancho del contenedor ajustado para dispositivos móviles */
+        font-size: 20px; /* Tamaño de fuente ajustado */
+        margin-top: 30px; /* Margen superior ajustado */
+    }
+
+    #container-7 {
+        width: 100%; /* Ancho del contenedor ajustado para dispositivos móviles */
+        margin-top: 40px; /* Margen superior ajustado */
+        padding: 10px; /* Relleno interior reducido */
+        left: 0; /* Ajuste de posición */
+    }
+
+    #container-7 .card {
+        width: 90%; /* Anchura de la tarjeta ajustada */
+        margin: 0 auto; /* Centra horizontalmente la tarjeta */
+    }
+
+    #container-7 .card h3 {
+        font-size: 28px; /* Tamaño de fuente del título ajustado */
+    }
+
+    #container-7 .card h4 {
+        font-size: 16px; /* Tamaño de fuente del subtítulo ajustado */
+    }
+
+    #container-7 .button {
+        font-size: 16px; /* Tamaño de fuente del botón ajustado */
+        margin-top: 20px; /* Margen superior ajustado */
+    }
+
+}
+
+
+
+
+  </style>
+</head>
+<body>
+    <!-- Primer contenedor con imagen de fondo -->
+    <div class="container">
+        <h1>Clare Hechizante y Sorprendente</h1>
+        <p>Descubre la impresionante belleza natural y el rico patrimonio cultural del Condado de Clare en Irlanda. Desde sus icónicos acantilados hasta sus encantadores pueblos, es un destino que no puedes perderte en la Ruta Costera del Atlántico. 
+            Únete a mí en esta emocionante exploración.
+    
+        </p>
+        <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/panoramica-de-los-acantilados-de-Moher.jpeg.jpeg" alt="perspectiva de una vista desde el sendero, de los acantilados de moher">
+        <div class="icon-description">
+            <div id="icon" class="icon">
+                <img src="https://exploreirishlife.com/wp-content/uploads/2024/01/Logo-2-e1708634249792.png" alt="isologo ExploreIrishlife">
+            </div>
+            <div class="description" id="descripcion-icono">
+                Acantilados de Moher
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+    <!-- Segundo contenedor de texto -->
+<div class="container-2"> 
+    <div class="content">
+        <p>Explora el Condado de Clare en esta guía, desde los Acantilados de Moher, pasando por el Burren, hasta el Río Shannon. Situado en la costa oeste de Irlanda, el Condado de Clare cautiva a los visitantes con su impresionante paisaje natural, rica historia y encanto rural. Desde los majestuosos acantilados que se elevan sobre el Atlántico hasta la vasta extensión kárstica del Burren, este condado ofrece una experiencia única llena de belleza y aventura. Sumérgete en la cultura celta mientras exploras antiguos castillos, contempla la serenidad de sus pintorescos pueblos costeros y navega por las tranquilas aguas del histórico Río Shannon. En esta guía, descubrirás todo lo que necesitas saber para aprovechar al máximo tu viaje al impresionante Condado de Clare.</p>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Tercer contenedor con imagen y tarjeta interactiva -->
+<div id="container-3" class="container">
+    <div class="content">
+        <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/el-burren.jpg" alt="Vista panorámica del paisaje del Burren">
+        <div class="card">
+            <h3>El Burren</h3>
+            <h4>Una enorme meseta rocosa caracterizada por formaciones rocosas, cuevas, fósiles y una increíble variedad de plantas, es uno de los paisajes más fascinantes de Irlanda.</h4>
+            <button onclick="location.href='url_del_artículo';">Leer más</button>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Cuarto contenedor de texto -->
+    <div class="container-4"> 
+        <div class="content">
+            <p>Explora el Condado de Clare en esta guía, desde los Acantilados de Moher, pasando por el Burren, hasta el Río Shannon. Situado en la costa oeste de Irlanda, el Condado de Clare cautiva a los visitantes con su impresionante paisaje natural, rica historia y encanto rural. Desde los majestuosos acantilados que se elevan sobre el Atlántico hasta la vasta extensión kárstica del Burren, este condado ofrece una experiencia única llena de belleza y aventura. Sumérgete en la cultura celta mientras exploras antiguos castillos, contempla la serenidad de sus pintorescos pueblos costeros y navega por las tranquilas aguas del histórico Río Shannon. En esta guía, descubrirás todo lo que necesitas saber para aprovechar al máximo tu viaje al impresionante Condado de Clare.</p>
+        </div>
+    </div>
+
+    <!-- Quinto contenedor con imagen y tarjeta interactiva -->
+    <div id="container-5" class="container">
+        <div class="content">
+            <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/acantilados-de-moher.jpg" alt="Vista aérea de los acantilados de Moher">
+            <div class="card">
+                <h3>Acantilados De Moher</h3>
+                <h4>Estos emblemáticos acantilados de Irlanda se extienden a lo largo del océano Atlántico, con una impresionante altura de más de 700 pies. 
+
+                    <button onclick="location.href='url_del_artículo';">Leer más</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sexto contenedor de texto -->
+    <div class="container-6">
+        <div class="content">
+            <p>Explora el Condado de Clare en esta guía, desde los Acantilados de Moher, pasando por el Burren, hasta el Río Shannon. Situado en la costa oeste de Irlanda, el Condado de Clare cautiva a los visitantes con su impresionante paisaje natural, rica historia y encanto rural. Desde los majestuosos acantilados que se elevan sobre el Atlántico hasta la vasta extensión kárstica del Burren, este condado ofrece una experiencia única llena de belleza y aventura. Sumérgete en la cultura celta mientras exploras antiguos castillos, contempla la serenidad de sus pintorescos pueblos costeros y navega por las tranquilas aguas del histórico Río Shannon. En esta guía, descubrirás todo lo que necesitas saber para aprovechar al máximo tu viaje al impresionante Condado de Clare.</p>
+        </p>
+        </div>
+    </div>
+
+    <!-- Séptimo contenedor con imagen y tarjeta interactiva -->
+    <div id="container-7" class="container">
+        <div class="content">
+            <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/rio-shannon.jpg" alt="Vista aérea de un barco navegando por el río Shannon">
+            <div class="card">
+                <h3>Río Shannon</h3>
+                <h4>Un símbolo de la identidad, un escenario emocionante para aventuras que despiertan la imaginación y el espíritu explorador. Desde la emoción de navegar sus aguas en botes tradicionales hasta la adrenalina de practicar deportes acuáticos
+
+                    <button onclick="location.href='url_del_artículo';">Leer más</button>
+            </div>
+        </div>
+    </div>>
+
+ <!-- Octavo contenedor con slider -->
+ <div id="container-8" class="container">
+    <!-- Noveno contenedor con botones de navegación personalizados -->
+    <div id="container-9" class="container-9">
+        <!-- Botón de navegación hacia la izquierda -->
+        <div class="custom-navigation">
+            <div class="swiper-button-prev" id="prevButton">
+               
+            </div>
+        </div>
+        <!-- Botón de navegación hacia la derecha -->
+        <div class="custom-navigation">
+            <div class="swiper-button-next" id="nextButton">
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-header">
+        <h2>Explora Nuestros Artículos</h2> <!-- Título -->
+        <h3>Descubre más sobre nuestras maravillosas ubicaciones</h3> <!-- Subtítulo -->
+    </div>
+    <!-- Barra de progreso -->
+    <div class="slider-progress"></div>
+
+    <!-- Slider -->
+    <div class="swiper-container" >
+        <div class="swiper-wrapper">
+            <!-- Primer artículo -->
+            <div class="swiper-slide">
+                <a href="https://exploreirishlife.com/condado-de-limerick/">
+                    <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/condado-limerick.jpg" alt="Paisaje de los valles del condado de Limerick">
+                    <h4>El Condado de Limerick y su Particular Riqueza</h4> <!-- Título de la tarjeta -->
+                </a>
+            </div>
+
+            <!-- Segundo artículo -->
+            <div class="swiper-slide">
+                <a href="https://exploreirishlife.com/el-condado-de-galway/">
+                    <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/Vista-del-rio-y-la-ciudad-de-Galway.jpg" alt="Vista del río y la ciudad de Galway">
+                    <h4>Qué ver en el Condado de Galway</h4> <!-- Título de la tarjeta -->
+                </a>
+            </div>
+
+            <!-- Tercer artículo -->
+            <div class="swiper-slide">
+                <a href="https://exploreirishlife.com/condado-de-tipperary/">
+                    <img src="https://exploreirishlife.com/wp-content/uploads/2024/02/Vista-del-paisaje-del-condado-de-Tipperary.jpg" alt="Vista desde el valle del paisaje del condado de Tipperary">
+                    <h4>El Excepcional Condado de Tipperary en el Corazón de Irlanda</h4> <!-- Título de la tarjeta -->
+                </a>
+            </div>
+            <!-- Agrega más artículos según sea necesario -->
+        </div>
+    </div>
+</div>
+
+<!-- Deecimo contenedor con iframe -->
+<div id="container-10" class="container">
+    <div class="content">
+        <iframe src="https://carlosgim95.github.io/Condado-de-Clare/" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Inicializar Swiper para el contenedor 8
+        var swiper8 = new Swiper('#container-8 .swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 0,
+            loop: true, // Activar bucle infinito
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Inicializar Swiper para el contenedor 9
+        var swiper9 = new Swiper('#container-9 .swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 0,
+            loop: true, // Activar bucle infinito
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Escuchar clics en los botones de navegación
+        $('#nextButton').on('click', function() {
+            progressPercentage += 25;
+            if (progressPercentage > maxPercentage) {
+                progressPercentage = minPercentage; // Si está en el último slider, ir al primero
+            }
+            updateProgressBar();
+            swiper8.slideNext(); // Mover el slider hacia adelante
+            swiper9.slideNext(); // Mover el slider hacia adelante
+        });
+
+        $('#prevButton').on('click', function() {
+            progressPercentage -= 25;
+            if (progressPercentage < minPercentage) {
+                progressPercentage = maxPercentage; // Si está en el primer slider, ir al último
+            }
+            updateProgressBar();
+            swiper8.slidePrev(); // Mover el slider hacia atrás
+            swiper9.slidePrev(); // Mover el slider hacia atrás
+        });
+
+        // Seleccionar la barra de progreso
+        const progressBar = document.querySelector('.slider-progress');
+        progressBar.style.width = '25%'; // Establecer el ancho inicial al 25%
+        progressBar.style.backgroundColor = 'hsl(25, 75%, 50%)'; // Establecer el color inicial
+        progressBar.style.border = '1px solid #ccc'; // Añadir borde a la barra de progreso
+
+        // Variables para rastrear el progreso
+        let progressPercentage = 25;
+        const minPercentage = 25;
+        const maxPercentage = 75;
+
+        // Función para actualizar la barra de progreso
+        function updateProgressBar() {
+            progressBar.style.width = progressPercentage + '%';
+            progressBar.style.backgroundColor = `hsl(${progressPercentage}, 75%, 50%)`;
+        }
+    });
+
+
+
+
+         
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
